@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gringo?</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <h1>Sistema de Gringo</h1>
+         Indique seu país <input type="text" id="val">
+         <input type="button" value="Verificar" onclick="verificar()">
+
+         <div id="res"> </div>
+
+            <script>
+               function verificar() {
+                   var txt = document.querySelector('input#val')
+                   var res = document.querySelector('div#res')
+                    var p = (txt.value)
+
+                   res.innerHTML = ` Seu País é: <strong> ${p} </strong> `
+                       if (p == 'Brasil') {
+                           res.innerHTML += ' <p> Sendo assim você é Brasileiro'
+                       } else {
+                           res.innerHTML += ' <p> Sendo assim você é <strong> Gringo </strong>'
+                       }
+               }
+            </script>
+            <img src="imagens/argentina.png" alt="ar" class="ar">
+    </div>
+</body>
+</html>
